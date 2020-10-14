@@ -30,12 +30,20 @@ jobs:
       arch: arm64
       go: "1.14"
       env: go_32=yes
+  
   include:
     # Define one extra linux build, which we use to run cross
     # compiled 32 bit tests
     - os: linux
+      arch: amd64le
+      go: "1.13"
+      env: go_32=yes
+   include:
+    # Define one extra linux build, which we use to run cross
+    # compiled 32 bit tests
+    - os: linux
       arch: ppc64le
-      go: "1.14"
+      go: "pip"
       env: go_32=yes
 
 notifications:
