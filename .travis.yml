@@ -43,7 +43,7 @@ jobs:
     # compiled 32 bit tests
     - os: linux
       arch: ppc64le
-      go: "pip"
+      go: "tip"
       env: go_32=yes
 
 notifications:
